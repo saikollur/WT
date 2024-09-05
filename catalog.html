@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        td img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .add-to-cart-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Book Catalog</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Cover</th>
+                <th>Author</th>
+                <th>Publisher</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example Book Entry -->
+            <tr>
+                <td><img src="images\51hxn8qCATL.jpg" alt="Book 1 Cover"></td>
+                <td>Charles Dickens</td>
+                <td>Edgar Allan Poe</td>
+                <td>₹200 </td>
+                <td><button class="add-to-cart-btn" onclick="addToCart('Book 1')">Add to Cart</button></td>
+            </tr>
+            <tr>
+                <td><img src="images\81xf7GKNKTL._SL1200_.jpg" alt="Book 2 Cover"></td>
+                <td>George R. R. Martin</td>
+                <td> John Hodgman</td>
+                <td>₹400</td>
+                <td><button class="add-to-cart-btn" onclick="addToCart('Book 2')">Add to Cart</button></td>
+            </tr>
+            <!-- Add more books as needed -->
+        </tbody>
+    </table>
+
+    <script>
+        function addToCart(bookName) {
+            alert(`${bookName} has been added to your cart.`);
+        }
+    </script>
+</body>
+</html>

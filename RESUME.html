@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .resume {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .profile-image {
+            display: block;
+            margin: 0 auto 10px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+
+        .job {
+            margin: 10px 0;
+        }
+
+        .job h3 {
+            margin: 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            list-style-type: square;
+        }
+
+        .skills ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .skills ul li {
+            flex: 1 1 45%;
+            list-style-type: none;
+            margin-bottom: 5px;
+        }
+
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .dark-mode .resume {
+            background-color: #444;
+            color: #fff;
+        }
+
+        .dark-mode header {
+            border-bottom-color: #fff;
+        }
+
+        .dark-mode section h2 {
+            border-bottom-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <header>
+            <!-- Make sure your image is in the same directory as this HTML file and is named 'candidate.jpg' -->
+            <!--<img src="images\candidate.jpg" alt="Candidate Photo" class="profile-image"> -->
+            <h1>Sai Krishna Kolluru</h1>
+            <p>Video Editor</p>
+            <div class="contact-info">
+                <p>Email: saiajju14@gmail.com</p>
+                <p>Phone: +91 9502535435</p>
+                <p>LinkedIn: linkedin.com/in/saikollur18</p>
+            </div>
+        </header>
+        <section class="profile">
+            <h2>Profile</h2>
+            <p>Skilled in video and photo editing with a strong interest in AI/ML, combining creative content production with a passion for leveraging advanced technologies to enhance media workflows.
+            </p>
+        </section>
+        <section class="experience">
+            <h2>Experience</h2>
+            <div class="job">
+                <h3>Curriculum Based Projects</h3>
+                <p>Regression,Classification,Clustering Models</p>
+                <ul>
+                    <li>Instagram Reels, Youtube Shorts, Birthday Videos</li>
+                    <li>Photo Manipulations,Smudge arts, CDP's </li>
+                    <li>Heart Disease Detection with logistic Regression </li>
+                    <li>Image Classifications using KNN </li>
+                </ul>
+            </div>
+        </section>
+        <section class="education">
+            <h2>Education</h2>
+            <p>Bachelor of Science in Artificial Intelligence and Machine Learning</p>
+            <p>University of Vignan, 2022 - 2026</p>
+        </section>
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li> Adobe Photoshop, Adobe Premiere Pro, Capcut</li>
+                <li>Adobe Lightroom CC</li>
+                <li>C(basics), Python, Advanced Python</li>
+                <li>Java (oops), C++(Beginner)</li>
+            </ul>
+        </section>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const resume = document.querySelector('.resume');
+            const toggleButton = document.createElement('button');
+            toggleButton.textContent = 'Toggle Dark Mode';
+            toggleButton.style.display = 'block';
+            toggleButton.style.margin = '20px auto';
+            document.body.insertBefore(toggleButton, resume);
+
+            toggleButton.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+            });
+        });
+    </script>
+</body>
+</html>

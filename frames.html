@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage with Frames</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        
+        .top {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .bottom {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        .left {
+            background-color: #f4f4f4;
+            width: 200px;
+            padding: 10px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .center {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .left a {
+            display: block;
+            padding: 8px;
+            text-decoration: none;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .left a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <img src="images\pngwing.com (1).png" alt="Company Logo" style="max-width: 100px; vertical-align: middle;">
+        <h1>Intel Processors</h1>
+    </div>
+
+    <div class="container">
+        <div class="left">
+            <a href="#" data-content="home">Home</a>
+            <a href="#" data-content="products">Products</a>
+            <a href="#" data-content="services">Services</a>
+            <a href="#" data-content="branches">Branches</a>
+            <a href="#" data-content="about">About</a>
+        </div>
+
+        <div class="center" id="content">
+            <p>Welcome to the Company Website!</p>
+        </div>
+    </div>
+
+    <div class="bottom">
+        &copy; 2024 Company Name. All rights reserved.
+    </div>
+
+    <script>
+        document.querySelectorAll('.left a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const content = document.getElementById('content');
+                const page = this.getAttribute('data-content');
+                
+                switch (page) {
+                    case 'home':
+                        content.innerHTML = '<h2>Home</h2><p>This is the home page content.</p>';
+                        break;
+                    case 'products':
+                        content.innerHTML = '<h2>Products</h2><p>Here are some of our products.</p>';
+                        break;
+                    case 'services':
+                        content.innerHTML = '<h2>Services</h2><p>Learn more about our services.</p>';
+                        break;
+                    case 'branches':
+                        content.innerHTML = '<h2>Branches</h2><p>Find our branches here.</p>';
+                        break;
+                    case 'about':
+                        content.innerHTML = '<h2>About</h2><p>About our company.</p>';
+                        break;
+                    default:
+                        content.innerHTML = '<p>Content not available.</p>';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
